@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />   
+</head>
+<body>
+    <header>
+        <h1>Hello Yougnjin Kwak World !</h1>
+        <h1>Youngjin Kwak</h1>
+         <br />
+        @Html.ActionLink("Home", "Index", "Home")
+        @Html.ActionLink("Show the song!", "SongForm", "Home")
+        @Html.ActionLink("Persons", "CreatePerson", "Home")
+        @*@Html.ActionLink("Create Loosely Typed view (using Session Data)", "CreateSession", "Home")*@
+        @*@Html.ActionLink("Create Loosely Typed' view (using ViewData/ViewBag)", "CreateViewData", "Home")*@
+     </header>
+    <div>
+        @RenderBody()
+    </div>
+    <footer>
+        In footer, use HTML tags/style of your choice to explain steps you took to add css file and _Layout. Should include the following:
+        a. Short description of what layout does
+        b. Why you put the files in those directories. E.g. CSS in directory x, and why. Layout in directory Y and why. Etc. 
+        c. You should not include the content of css or how you defined your css
+        d. Open _ViewStart.cshtml and specify the layout you created as default layout for all views (you are on your own)
+        <br />
+        <div 
+            class="question-container"    
+        >
+            <div
+                class="question-container--title"    
+            >
+                a. Short description of what layout does
+            </div>
+            <div
+                class="question-container--answer"    
+            >
+                The layout view allows you to define a common site template, <br />
+                which can be inherited in multiple views to provide a consistent look and feel in multiple pages of an application 
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

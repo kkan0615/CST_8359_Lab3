@@ -1,0 +1,43 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<form method="post" action="/Home/SongForm">
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <button type="submit" name="Sing" value="Sing">Play Again</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Int32.Parse(Context.Session.GetString("numberOfBottles"))
+                </td>
+            </tr>
+            @for(int i = Int32.Parse(Context.Session.GetString("numberOfBottles")); i > 0; i--)
+            {
+               
+            <tr>
+                <td>
+                    <p> 
+                        @i green bottles hanging on the wall,<br>
+                        @i green bottles hanging on the wall,<br>
+                        And if one green bottle should accidentally fall,<br>
+                        @if(i - 1 > 0) { <span>There'll be @(i-1) green bottles hanging on the wall.</span> }
+                        @if(i - 1 == 0) { <span>There'll be no green bottles hanging on the wall.</span> }
+                    </p> <br>
+                </td>
+            </tr>
+            }
+            <tr>
+                <td>
+                    <p>
+                        There is no green bottle standing on the wall.
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>
