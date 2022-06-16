@@ -11,11 +11,6 @@
                     <button type="submit" name="Sing" value="Sing">Play Again</button>
                 </td>
             </tr>
-            <tr>
-                <td>
-                    @Int32.Parse(Context.Session.GetString("numberOfBottles"))
-                </td>
-            </tr>
             @for(int i = Int32.Parse(Context.Session.GetString("numberOfBottles")); i > 0; i--)
             {
                
@@ -26,7 +21,7 @@
                         @i green bottles hanging on the wall,<br>
                         And if one green bottle should accidentally fall,<br>
                         @if(i - 1 > 0) { <span>There'll be @(i-1) green bottles hanging on the wall.</span> }
-                        @if(i - 1 == 0) { <span>There'll be no green bottles hanging on the wall.</span> }
+                        else { <span>There'll be no green bottles hanging on the wall.</span> }
                     </p> <br>
                 </td>
             </tr>
