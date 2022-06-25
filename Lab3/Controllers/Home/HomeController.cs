@@ -17,7 +17,7 @@ namespace Lab3.Controllers.Home
         {
             System.Diagnostics.Debug.WriteLine(Request.Form["numberOfBottles"]);
             HttpContext.Session.SetString("numberOfBottles", Request.Form["numberOfBottles"]);
-            // you will complete this
+
             return View();
         }
 
@@ -26,7 +26,6 @@ namespace Lab3.Controllers.Home
         [HttpPost]
         public IActionResult DisplayPerson(Person person)
         {
-            // you will complete this
             return View(person);
 
         }
